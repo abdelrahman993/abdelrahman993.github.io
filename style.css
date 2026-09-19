@@ -115,6 +115,7 @@ body {
     background: transparent !important;
     display: block;
     object-fit: contain;
+    filter: saturate(4) hue-rotate(12deg) brightness(1.15);
     margin: 0 auto;
 }
 

@@ -4,11 +4,16 @@
     box-sizing: border-box;
 }
 
+html,
 body {
-    background: #000000;
-    color: #fff;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    background: #080809;
+    color: #e8e8ed;
     font-family: 'Poppins', sans-serif;
-    overflow: auto;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -29,9 +34,9 @@ body {
 .icon-float {
     position: absolute;
     font-size: 3rem;
-    color: rgba(218, 165, 32, 0.1);
+    color: rgba(225, 175, 35, 0.12);
     animation: float 6s infinite;
-    opacity: 0.5;
+    opacity: 0.55;
 }
 
 .icon-float:nth-child(1) {
@@ -84,13 +89,14 @@ body {
 
 /* Header */
 .header {
-    background: linear-gradient(135deg, rgba(218, 165, 32, 0.1) 0%, transparent 100%);
-    border-bottom: 2px solid rgba(218, 165, 32, 0.3);
-    padding: 2rem 2rem 0.5rem 2rem;
+    background: linear-gradient(135deg, rgba(225, 175, 35, 0.1) 0%, transparent 100%);
+    border-bottom: 2px solid rgba(225, 175, 35, 0.35);
+    padding: 2rem 1.5rem 0.5rem 1.5rem;
     text-align: center;
     position: relative;
     z-index: 2;
     flex-shrink: 0;
+    width: 100%;
 }
 
 .header h1 {
@@ -103,32 +109,34 @@ body {
 }
 
 .header img {
-    height: 100px;
-    width: auto;
+    height: auto;
+    max-height: 100px;
+    max-width: 90%;
     background: transparent !important;
     display: block;
     object-fit: contain;
-    filter: saturate(2) hue-rotate(-5deg) brightness(1.2);
+    filter: saturate(2) hue-rotate(-5deg) brightness(1.15);
+    margin: 0 auto;
 }
 
 .header p {
-    color: #909090;
+    color: #a0a0a5;
     margin-top: 0.5rem;
     font-size: 0.95rem;
 }
 
 .arabic-text {
-    color: #909090;
+    color: #a0a0a5;
     margin-top: 0.5rem;
     font-size: 0.95rem;
     font-family: 'Cairo', sans-serif;
 }
 
 .menu-title {
-    color: #DAA520;
+    color: #DFAC28;
     font-size: 1.8rem;
     font-weight: 700;
-    margin-top: 2.4rem;
+    margin-top: 2rem;
     margin-bottom: 0.1rem;
     font-family: 'Outfit', sans-serif;
     letter-spacing: 2px;
@@ -142,19 +150,21 @@ body {
     justify-content: flex-start;
     position: relative;
     z-index: 1;
-    padding-top: 2rem;
+    padding: 1.5rem 1rem 0 1rem;
     gap: 0;
     flex-shrink: 0;
+    width: 100%;
 }
 
 /* Sidebar Navigation */
 .sidebar {
-    width: 500px;
-    background: #000000 !important;
-    border: 2px solid rgba(218, 165, 32, 0.3);
+    width: 100%;
+    max-width: 500px;
+    background: #0b0b0d !important;
+    border: 2px solid rgba(225, 175, 35, 0.35);
     display: flex;
     flex-direction: column;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
     animation: fadeIn 0.5s ease-out;
     border-radius: 12px;
     overflow-y: auto;
@@ -174,6 +184,8 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 0;
+    width: 100%;
+    max-width: 500px;
 }
 
 @keyframes fadeIn {
@@ -188,21 +200,22 @@ body {
 
 /* Search Box */
 .search-box {
-    padding: 1.5rem 1rem;
-    border-bottom: 1px solid rgba(218, 165, 32, 0.4);
-    background: #000000 !important;
+    padding: 1.25rem 1rem;
+    border-bottom: 1px solid rgba(225, 175, 35, 0.38);
+    background: #0b0b0d !important;
     backdrop-filter: blur(10px);
+    width: 100%;
 }
 
 .search-box input {
     width: 100%;
     padding: 0.8rem 1rem;
-    background: rgba(0, 0, 0, 0.6);
-    border: 1px solid rgba(218, 165, 32, 0.5);
+    background: #0b0b0d;
+    border: 1px solid rgba(225, 175, 35, 0.45);
     border-radius: 8px;
-    color: #fff;
+    color: #ffffff;
     font-family: 'Cairo', sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     outline: none;
     transition: all 0.3s;
     text-align: right;
@@ -210,13 +223,13 @@ body {
 }
 
 .search-box input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.55);
 }
 
 .search-box input:focus {
-    background: rgba(255, 255, 255, 0.030);
-    border-color: #DAA520;
-    box-shadow: 0 0 10px rgba(218, 165, 32, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: #DFAC28;
+    box-shadow: 0 0 10px rgba(223, 172, 40, 0.35);
 }
 
 /* Categories Nav */
@@ -228,16 +241,16 @@ body {
     padding: 1rem;
     overflow-y: auto;
     overflow-x: hidden;
-    background: #000000 !important;
+    background: #0b0b0d !important;
     backdrop-filter: blur(10px);
     width: 100%;
 }
 
 .cat-btn {
-    padding: 1rem;
-    background: #000000;
-    border: 1px solid rgba(218, 165, 32, 0.4);
-    color: #DAA520;
+    padding: 0.9rem 1rem;
+    background: #0b0b0d;
+    border: 1px solid rgba(225, 175, 35, 0.38);
+    color: #DFAC28;
     cursor: pointer;
     border-radius: 8px;
     font-weight: 600;
@@ -247,19 +260,20 @@ body {
     font-size: 0.95rem;
     direction: rtl;
     width: 100%;
+    word-break: break-word;
 }
 
 .cat-btn:hover {
-    background: rgba(255, 255, 255, 0.030);
-    border-color: #DAA520;
-    color: #DAA520;
-    transform: translateX(-5px);
+    background: rgba(225, 175, 35, 0.08);
+    border-color: #DFAC28;
+    color: #DFAC28;
+    transform: translateX(-3px);
 }
 
 .cat-btn.active {
-    background: #DAA520;
-    border-color: #DAA520;
-    color: #000000;
+    background: #DFAC28;
+    border-color: #DFAC28;
+    color: #080809;
     font-weight: 700;
 }
 
@@ -322,7 +336,7 @@ body {
 .product-card {
     background: transparent;
     border: none;
-    border-bottom: 1px solid rgba(218, 165, 32, 0.2);
+    border-bottom: 1px solid rgba(225, 175, 35, 0.2);
     border-radius: 0;
     overflow: hidden;
     cursor: pointer;
@@ -331,7 +345,8 @@ body {
     flex-direction: column;
     box-shadow: none;
     animation: slideUp 0.5s ease-out backwards;
-    padding: 1rem 0;
+    padding: 0.9rem 0.25rem;
+    width: 100%;
 }
 
 .product-card:nth-child(1) {
@@ -376,13 +391,13 @@ body {
 
 .product-card:hover {
     transform: none;
-    background: rgba(218, 165, 32, 0.05);
+    background: rgba(225, 175, 35, 0.05);
 }
 
 .product-image {
     width: 100%;
     height: 0;
-    background: #050505;
+    background: #070708;
     overflow: hidden;
     position: relative;
     display: none;
@@ -403,11 +418,11 @@ body {
     position: relative;
     top: auto;
     right: auto;
-    background: #DAA520;
-    color: #0a0a0a;
+    background: #DFAC28;
+    color: #080809;
     padding: 0.25rem 0.6rem;
     border-radius: 4px;
-    font-size: 0.65rem;
+    font-size: 0.7rem;
     font-weight: 700;
     display: inline-block;
     margin-bottom: 0.3rem;
@@ -421,24 +436,29 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.3rem;
+    width: 100%;
 }
 
 .product-name {
     font-size: 1rem;
     font-weight: 700;
-    color: #DAA520;
-    margin-bottom: 0;
-    line-height: 1.3;
+    color: #DFAC28;
+    margin-bottom: 0.1rem;
+    line-height: 1.35;
     text-align: right;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .product-desc {
-    font-size: 0.85rem;
-    color: #a0a0a0;
-    line-height: 1.4;
+    font-size: 0.88rem;
+    color: #b0b0b5;
+    line-height: 1.45;
     flex: 1;
     margin-bottom: 0;
     text-align: right;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 /* Empty State */
@@ -448,13 +468,14 @@ body {
     align-items: center;
     justify-content: center;
     height: 100%;
-    color: #909090;
+    color: #a0a0a5;
     text-align: center;
+    padding: 1.5rem 0;
 }
 
 .empty-state i {
     font-size: 3rem;
-    color: rgba(218, 165, 32, 0.3);
+    color: rgba(225, 175, 35, 0.35);
     margin-bottom: 1rem;
 }
 
@@ -465,7 +486,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100%;
-    color: #909090;
+    color: #a0a0a5;
     text-align: center;
     animation: fadeInWelcome 0.8s ease-out;
 }
@@ -482,42 +503,42 @@ body {
 
 .welcome-message i {
     font-size: 4rem;
-    color: rgba(218, 165, 32, 0.3);
+    color: rgba(225, 175, 35, 0.35);
     margin-bottom: 1rem;
 }
 
 .welcome-message h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    color: #DAA520;
+    color: #DFAC28;
 }
 
 .welcome-message p {
-    color: #a0a0a0;
+    color: #b0b0b5;
 }
 
 /* Scrollbar Styling */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #0a0a0a;
+    background: #09090b;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #DAA520;
+    background: #DFAC28;
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #e6b800;
+    background: #e5b834;
 }
 
 /* Products Container */
 .products-container {
     width: 100%;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.75rem;
     background: transparent;
     border-radius: 0;
     margin: 0;
@@ -546,28 +567,32 @@ body {
 /* Footer */
 .footer {
     background: transparent;
-    padding: 2rem;
+    padding: 2rem 1rem;
     text-align: center;
     position: relative;
     z-index: 2;
     color: #fff;
     flex-shrink: 0;
+    width: 100%;
 }
 
 .footer-content {
-    max-width: 1200px;
+    max-width: 500px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .footer-address {
     font-size: 0.95rem;
-    color: #909090;
+    color: #a0a0a5;
     margin-bottom: 1rem;
+    line-height: 1.5;
+    word-break: break-word;
 }
 
 .footer-hours {
     font-size: 1rem;
-    color: #DAA520;
+    color: #DFAC28;
     font-weight: 700;
     margin-bottom: 1.5rem;
 }
@@ -575,7 +600,8 @@ body {
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
     margin-bottom: 1rem;
 }
 
@@ -583,27 +609,131 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 35px;
-    height: 35px;
-    background: rgba(218, 165, 32, 0.2);
-    border: 2px solid rgba(218, 165, 32, 0.5);
+    width: 38px;
+    height: 38px;
+    background: rgba(225, 175, 35, 0.2);
+    border: 2px solid rgba(225, 175, 35, 0.5);
     border-radius: 50%;
-    color: #DAA520;
-    font-size: 1rem;
+    color: #DFAC28;
+    font-size: 1.05rem;
     transition: all 0.3s ease;
     text-decoration: none;
 }
 
 .social-link:hover {
-    background: rgba(218, 165, 32, 0.4);
-    border-color: #DAA520;
+    background: rgba(225, 175, 35, 0.38);
+    border-color: #DFAC28;
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(218, 165, 32, 0.3);
+    box-shadow: 0 6px 20px rgba(225, 175, 35, 0.35);
 }
 
 .footer-copyright {
-    border-top: 1px solid rgba(218, 165, 32, 0.4);
+    border-top: 1px solid rgba(225, 175, 35, 0.38);
     padding-top: 1rem;
     font-size: 0.85rem;
-    color: #909090;
+    color: #a0a0a5;
+    word-break: break-word;
+}
+
+/* Mobile Responsiveness Rules */
+@media screen and (max-width: 480px) {
+    .header {
+        padding: 1.5rem 1rem 0.5rem 1rem;
+    }
+
+    .header img {
+        max-height: 80px;
+    }
+
+    .menu-title {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+        letter-spacing: 1.5px;
+    }
+
+    .container {
+        padding: 1rem 0.75rem 0 0.75rem;
+    }
+
+    .sidebar {
+        border-radius: 10px;
+        border-width: 1px;
+    }
+
+    .search-box {
+        padding: 1rem 0.75rem;
+    }
+
+    .search-box input {
+        font-size: 0.9rem;
+        padding: 0.7rem 0.85rem;
+    }
+
+    .categories-nav {
+        padding: 0.75rem 0.5rem;
+        gap: 0.4rem;
+    }
+
+    .cat-btn {
+        padding: 0.8rem 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    .products-container {
+        padding: 0.5rem 0.25rem;
+    }
+
+    .product-card {
+        padding: 0.8rem 0.1rem;
+    }
+
+    .product-name {
+        font-size: 0.95rem;
+    }
+
+    .product-desc {
+        font-size: 0.82rem;
+    }
+
+    .social-links {
+        gap: 1.25rem;
+    }
+
+    .social-link {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .header img {
+        max-height: 70px;
+    }
+
+    .menu-title {
+        font-size: 1.35rem;
+        margin-top: 1.2rem;
+    }
+
+    .container {
+        padding: 0.75rem 0.5rem 0 0.5rem;
+    }
+
+    .categories-nav {
+        padding: 0.5rem 0.25rem;
+    }
+
+    .cat-btn {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.85rem;
+    }
+
+    .product-name {
+        font-size: 0.9rem;
+    }
+
+    .product-desc {
+        font-size: 0.8rem;
+    }
 }
